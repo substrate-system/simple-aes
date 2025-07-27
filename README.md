@@ -3,7 +3,8 @@
 [![module](https://img.shields.io/badge/module-ESM%2FCJS-blue?style=flat-square)](README.md)
 [![types](https://img.shields.io/npm/types/@bicycle-codes/simple-aes?style=flat-square)](README.md)
 [![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/)
-[![install size](https://flat.badgen.net/packagephobia/install/@bicycle-codes/simple-aes?cache-control=no-cache)](https://packagephobia.com/result?p=@bicycle-codes/simple-aes)
+[![install size](https://flat.badgen.net/packagephobia/install/@substrate-system/simple-aes?cache-control=no-cache)](https://packagephobia.com/result?p=@substrate-system/simple-aes)
+[![GZip size](https://flat.badgen.net/bundlephobia/minzip/@substrate-system/simple-aes)](https://bundlephobia.com/package/@substrate-system/simple-aes)
 [![license](https://img.shields.io/badge/license-Polyform_Non_Commercial-26bc71?style=flat-square)](LICENSE)
 
 
@@ -27,14 +28,15 @@ Thanks to [Fission](https://github.com/fission-codes/), the original author for 
 
 <!-- tocstop -->
 
-## install
+## Install
+
 ```sh
-npm i -S @bicycle-codes/simple-aes
+npm i -S @substrate-system/simple-aes
 ```
 
-## use
+## Use
 
-### bundler
+### Bundler
 Just import
 
 ```js
@@ -42,8 +44,8 @@ import {
     decryptMessage,
     encryptMessage,
     type Message
-} from '@bicycle-codes/simple-aes'
-// } from '@bicycle-codes/simple-aes/compat'  // for older browsers
+} from '@substrate-system/simple-aes'
+// } from '@substtrate-system/simple-aes/compat'  // for older browsers
 ```
 
 ### pre-bundled
@@ -52,8 +54,8 @@ This exposes pre-bundled & minified JS files.
 #### copy
 
 ```sh
-cp ./node_modules/@bicycle-codes/simple-aes/dist/compat.min.js ./public
-cp ./node_modules/@bicycle-codes/simple-aes/dist/index.min.js ./public/simple-aes.min.js
+cp ./node_modules/@substrate-system/simple-aes/dist/compat.min.js ./public
+cp ./node_modules/@substrate-system/simple-aes/dist/index.min.js ./public/simple-aes.min.js
 ```
 
 #### link
@@ -70,7 +72,7 @@ cp ./node_modules/@bicycle-codes/simple-aes/dist/index.min.js ./public/simple-ae
 
 ## API
 
-### `@bicycle-codes/simple-aes`
+### `@substrate-system/simple-aes`
 
 Use the `webcrypto` API.
 
@@ -79,10 +81,10 @@ import {
     decryptMessage,
     encryptMessage,
     type Message
-} from '@bicycle-codes/simple-aes'
+} from '@substrate-system/simple-aes'
 ```
 
-### `@bicycle-codes/simple-aes/compat`
+### `@substrate-system/simple-aes/compat`
 
 Use a user-land module, [@noble/ciphers](https://github.com/paulmillr/noble-ciphers). This will work in browsers of all ages.
 
@@ -90,7 +92,7 @@ Use a user-land module, [@noble/ciphers](https://github.com/paulmillr/noble-ciph
 import {
     encryptMessage,
     decryptMessage
-} from '@bicycle-codes/simple-aes/compat'
+} from '@substrate-system/simple-aes/compat'
 ```
 
 ### `encryptMessage`
@@ -109,7 +111,7 @@ async function encryptMessage (
 
 #### encrypt example
 ```ts
-import { SymmKeyLength, encryptMessage } from '@bicycle-codes/simple-aes'
+import { SymmKeyLength, encryptMessage } from '@substrate-system/simple-aes'
 
 const [encryptedMsg, { key }] = await encryptMessage({
     content: 'hello world'
@@ -138,8 +140,8 @@ async function decryptMessage (
 
 #### decrypt example
 ```js
-import { test } from '@bicycle-codes/tapzero'
-import { decryptMessage } from '@bicycle-codes/simple-aes'
+import { test } from '@substrate-system/tapzero'
+import { decryptMessage } from '@substrate-system/simple-aes'
 
 test('decrypt the message', async t => {
     const decrypted = await decryptMessage(message, key)
