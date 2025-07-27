@@ -1,28 +1,31 @@
 # simple AES
-![tests](https://github.com/bicycle-codes/simple-aes/actions/workflows/nodejs.yml/badge.svg)
+[![tests](https://img.shields.io/github/actions/workflow/status/substrate-system/simple-aes/nodejs.yml?style=flat-square)](https://github.com/substrate-system/simple-aes/actions/workflows/nodejs.yml)
 [![module](https://img.shields.io/badge/module-ESM%2FCJS-blue?style=flat-square)](README.md)
-[![types](https://img.shields.io/npm/types/@bicycle-codes/simple-aes?style=flat-square)](README.md)
+[![types](https://img.shields.io/npm/types/@substrate-system/simple-aes?style=flat-square)](README.md)
 [![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/)
 [![install size](https://flat.badgen.net/packagephobia/install/@substrate-system/simple-aes?cache-control=no-cache)](https://packagephobia.com/result?p=@substrate-system/simple-aes)
 [![GZip size](https://flat.badgen.net/bundlephobia/minzip/@substrate-system/simple-aes)](https://bundlephobia.com/package/@substrate-system/simple-aes)
-[![license](https://img.shields.io/badge/license-Polyform_Non_Commercial-26bc71?style=flat-square)](LICENSE)
+[![license](https://img.shields.io/badge/license-Big_Time-blue?style=flat-square)](LICENSE)
 
 
-Cryptography used by [vanishing.page](https://vanishing.page/). Works in browsers and node.
+Cryptography used by [vanishing.page](https://vanishing.page/). Works in
+browsers and node.
 
-This is generally useful as a dead simple way of working with symmetric keys in a browser or node.
+This is generally useful as a dead simple way of working with symmetric keys
+in a browser or node.
 
-Thanks to [Fission](https://github.com/fission-codes/), the original author for much of this code.
+Thanks to [Fission](https://github.com/fission-codes/), the original author
+for much of this code.
 
 <!-- toc -->
 
-- [install](#install)
-- [use](#use)
-  * [bundler](#bundler)
+- [Install](#install)
+- [Use](#use)
+  * [Bundler](#bundler)
   * [pre-bundled](#pre-bundled)
 - [API](#api)
-  * [`@bicycle-codes/simple-aes`](#bicycle-codessimple-aes)
-  * [`@bicycle-codes/simple-aes/compat`](#bicycle-codessimple-aescompat)
+  * [`@substrate-system/simple-aes`](#substrate-systemsimple-aes)
+  * [`@substrate-system/simple-aes/compat`](#substrate-systemsimple-aescompat)
   * [`encryptMessage`](#encryptmessage)
   * [`decryptMessage`](#decryptmessage)
 
@@ -86,7 +89,9 @@ import {
 
 ### `@substrate-system/simple-aes/compat`
 
-Use a user-land module, [@noble/ciphers](https://github.com/paulmillr/noble-ciphers). This will work in browsers of all ages.
+Use a user-land module,
+[@noble/ciphers](https://github.com/paulmillr/noble-ciphers). This will work
+in browsers of all ages.
 
 ```js
 import {
