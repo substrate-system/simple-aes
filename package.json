@@ -2,7 +2,7 @@
   "name": "@substrate-system/simple-aes",
   "description": "An easy way to use symmetric keys in browsers or node",
   "type": "module",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "main": "dist/index.js",
   "scripts": {
     "lint": "eslint \"./**/*.{ts,js}\"",
