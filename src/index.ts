@@ -7,7 +7,6 @@ import {
 } from './CONSTANTS.js'
 import {
     normalizeToBuf,
-    normalizeUtf16ToBuf,
     base64ToArrBuf
 } from './util.js'
 import { SymmAlg, type Msg } from './types.js'
@@ -109,7 +108,7 @@ export async function encryptBytes (
     key:CryptoKey|string,
     opts?:Partial<SymmKeyOpts>
 ):Promise<CipherText> {
-    const data = normalizeUtf16ToBuf(msg)
+    const data = normalizeToBuf(msg, fromString)
     const importedKey = (typeof key === 'string' ?
         await importKey(key, opts) :
         key)
