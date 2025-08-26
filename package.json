@@ -39,7 +39,7 @@
     }
   },
   "dependencies": {
-    "@noble/ciphers": "^1.0.0",
+    "@noble/ciphers": "^2.0.0",
     "one-webcrypto": "^1.0.3",
     "uint8arrays": "^5.0.3"
   },
