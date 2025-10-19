@@ -108,7 +108,7 @@ export async function encryptBytes (
     key:CryptoKey|string,
     opts?:Partial<SymmKeyOpts>
 ):Promise<CipherText> {
-    const data = normalizeToBuf(msg, fromString)
+    const data = normalizeToBuf(msg, (str) => fromString(str).buffer)
     const importedKey = (typeof key === 'string' ?
         await importKey(key, opts) :
         key)
@@ -250,6 +250,6 @@ async function decryptBytes (
     return msgBuff
 }
 
-function normalizeBase64ToBuf (msg:Msg, encoding:SupportedEncodings):ArrayBuffer {
+function normalizeBase64ToBuf (msg:Msg, encoding:SupportedEncodings):ArrayBufferLike {
     return normalizeToBuf(msg, base64ToArrBuf.bind(null, encoding))
 }

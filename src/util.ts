@@ -8,8 +8,8 @@ enum CharSize {
 
 export const normalizeToBuf = function normalizeToBuf (
     msg:Msg,
-    strConv:(str:string) => ArrayBuffer
-):ArrayBuffer {
+    strConv:(str:string) => ArrayBufferLike
+):ArrayBufferLike {
     if (typeof msg === 'string') {
         return strConv(msg)
     } else if (typeof msg === 'object' && msg.byteLength !== undefined) {
@@ -24,18 +24,18 @@ export const normalizeToBuf = function normalizeToBuf (
 export function base64ToArrBuf (
     encoding:SupportedEncodings,
     string:string
-):ArrayBuffer {
+):ArrayBufferLike {
     return fromString(string, encoding).buffer
 }
 
 export function normalizeBase64ToBuf (
     msg:Msg,
     encoding:SupportedEncodings
-):ArrayBuffer {
+):ArrayBufferLike {
     return normalizeToBuf(msg, base64ToArrBuf.bind(null, encoding))
 }
 
-export const normalizeUtf16ToBuf = (msg:Msg):ArrayBuffer => {
+export const normalizeUtf16ToBuf = (msg:Msg):ArrayBufferLike => {
     return normalizeToBuf(msg, (str) => strToArrBuf(str, CharSize.B16))
 }
 

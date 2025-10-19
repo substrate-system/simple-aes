@@ -1,5 +1,5 @@
-import { gcm } from '@noble/ciphers/aes'
-import { randomBytes } from '@noble/ciphers/webcrypto'
+import { gcm } from '@noble/ciphers/aes.js'
+import { randomBytes } from '@noble/ciphers/utils.js'
 import { fromString, toString } from 'uint8arrays'
 import { CONTENT_ENCODING, KEY_ENCODING } from './CONSTANTS.js'
 import { normalizeBase64ToBuf } from './util.js'
