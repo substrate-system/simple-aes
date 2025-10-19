@@ -87,7 +87,7 @@ type SymmKeyOpts = {
 }
 
 /**
- * @TODO -- can pass in key size
+ * Create a key.
  */
 function createKey (opts?:Partial<SymmKeyOpts>):Promise<CryptoKey> {
     return webcrypto.subtle.generateKey(
@@ -218,7 +218,7 @@ export async function aesDecrypt (
     cryptoKey:CryptoKey,
     alg:SymmAlg,
     iv?:Uint8Array
-): Promise<Uint8Array> {
+):Promise<Uint8Array> {
     const decrypted = iv ?
         await webcrypto.subtle.decrypt(
             { name: alg, iv },
